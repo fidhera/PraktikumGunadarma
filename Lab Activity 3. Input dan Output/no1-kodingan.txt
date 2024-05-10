@@ -1,0 +1,23 @@
+import java.util.Scanner; // [1] Import class Scanner
+
+/*
+    Program ini menghitung keliling bujur sangkar
+    dengan sisi dari input pengguna.
+*/
+public class KelilingBujurSangkar
+{
+    public static void main(String[] args)
+    {
+        int sisi; // [2] Deklarasikan variabel untuk menyimpan sisi
+        int keliling; // [2] Deklarasikan variabel untuk menyimpan keliling
+        
+        Scanner scanner = new Scanner(System.in); // [3] Buat object Scanner untuk membaca input keyboard
+
+        System.out.print("Masukkan sisi (cm): "); // [4] Prompt pengguna untuk menginput sisi
+        sisi = scanner.nextInt(); // [4] dan tugaskan nilai yang diinput ke variabel sisi
+
+        keliling = 4 * sisi; // [5] Hitung keliling dari sisi yang diinput pengguna
+        
+        System.out.println("Keliling bujur sangkar adalah " + keliling + " cm."); // Cetak keliling
+    }
+}

@@ -1,0 +1,21 @@
+import java.util.Scanner; // [1] Import class Scanner
+
+/*
+    Program ini menghitung volume bola dengan jari-jari
+    dari input pengguna.
+*/
+public class VolumeBolaInput
+{
+    public static void main(String[] args)
+    {
+        double jariJari, volume; // [2] Deklarasikan variabel untuk menyimpan jari-jari dan volume
+        Scanner input = new Scanner(System.in); // [3] Buat object Scanner
+
+        System.out.print("Masukkan jari-jari (m): "); // [4] Prompt user untuk memasukkan jari-jari
+        jariJari = input.nextDouble(); // [4] dan simpan ke variabel jariJari
+
+        volume = (4.0 / 3.0) * Math.PI * Math.pow(jariJari, 3); // [5] Hitung volume bola
+
+        System.out.printf("Volume bola = %.2f m3.%n", volume); // [6] Tampilkan volume bola dengan presisi dua tempat desimal
+    }
+}
