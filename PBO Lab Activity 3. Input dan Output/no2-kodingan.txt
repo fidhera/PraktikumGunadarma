@@ -1,0 +1,33 @@
+import java.util.Scanner; // [1] Import class Scanner
+
+/*
+    Program ini meminta pengguna memasukkan nilai a, b, dan c, lalu 
+    menghitung akar x1 dan x2 dari persamaan kuadrat ax^2 + bx + c = 0.
+*/
+public class PersamaanKuadrat
+{
+    public static void main(String[] args)
+    {
+        int a, b, c; // [2] Deklarasikan a, b, c untuk menyimpan input pengguna
+        double x1, x2; // [3] Deklarasikan x1 dan x2 untuk menyimpan akar persamaan kuadrat
+        
+        Scanner keyboard = new Scanner(System.in); // [4] Buat object scanner dan referensikan ke variabel keyboard
+
+        System.out.print("Masukkan nilai a: "); // [5] Prompt pengguna untuk mendapatkan nilai a
+        a = keyboard.nextInt(); // [5] dan simpan ke variabel a
+
+        System.out.print("Masukkan nilai b: "); // [6] Prompt pengguna untuk mendapatkan nilai b
+        b = keyboard.nextInt(); // [6] dan simpan ke variabel b
+
+        System.out.print("Masukkan nilai c: "); // [7] Prompt pengguna untuk mendapatkan nilai c
+        c = keyboard.nextInt(); // [7] dan simpan ke variabel c
+
+        // [8] Hitung dua akar persamaan kuadrat
+        x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+        x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+        
+        // [9] Tampilkan akar persamaan kuadrat dengan dua tempat desimal
+        System.out.printf("x1 = %.2f%n", x1);
+        System.out.printf("x2 = %.2f%n", x2);
+    }
+}
