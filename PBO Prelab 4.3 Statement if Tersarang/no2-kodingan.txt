@@ -1,0 +1,7 @@
+if (jumlah1 > 10 && jumlah2 < 100) {
+    if (jumlah1 > jumlah2) {
+        System.out.println(jumlah1);
+    } else {
+        System.out.println(jumlah2);
+    }
+}
