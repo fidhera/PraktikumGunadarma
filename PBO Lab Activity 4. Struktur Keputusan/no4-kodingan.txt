@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class ATM {
+    public static void main(String[] args) {
+        // Buat objek Scanner
+        Scanner scanner = new Scanner(System.in);
+
+        // Konstanta PIN yang benar
+        final String CORRECT_PIN = "1234";
+
+        // Untuk menyimpan PIN yang dimasukkan pengguna
+        String inputPIN;
+
+        System.out.print("Masukkan PIN Anda: ");
+        inputPIN = scanner.nextLine();
+        if (inputPIN.equals(CORRECT_PIN)) {
+            System.out.println("PIN yang Anda masukkan benar.");
+            return;
+        } else {
+            System.out.println("PIN yang Anda masukkan salah.");
+        }
+
+        System.out.print("Masukkan kembali PIN Anda: ");
+        inputPIN = scanner.nextLine();
+        if (inputPIN.equals(CORRECT_PIN)) {
+            System.out.println("PIN yang Anda masukkan benar.");
+            return;
+        } else {
+            System.out.println("PIN yang Anda masukkan salah.");
+        }
+
+        System.out.print("Masukkan kembali PIN Anda: ");
+        inputPIN = scanner.nextLine();
+        if (inputPIN.equals(CORRECT_PIN)) {
+            System.out.println("PIN yang Anda masukkan benar.");
+        } else {
+            System.out.println("PIN yang Anda masukkan salah.");
+            System.out.println("Kartu ATM Anda terblokir.");
+        }
+    }
+}

@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class TarifPengiriman {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan berat paket Anda (kg): ");
+        double berat = input.nextDouble();
+
+        System.out.print("Masukkan jarak pengiriman (km): ");
+        double jarak = input.nextDouble();
+
+        int tarifPerKm;
+        if (berat <= 2) {
+            tarifPerKm = 1500;
+        } else if (berat <= 6) {
+            tarifPerKm = 3000;
+        } else if (berat <= 10) {
+            tarifPerKm = 5000;
+        } else {
+            tarifPerKm = 5500;
+        }
+
+        int jarakBulat = (int) jarak; // Membulatkan jarak ke bawah
+        int totalTarif = tarifPerKm * jarakBulat;
+
+        System.out.printf("Tarif Pengiriman = Rp.%,d.00\n", totalTarif);
+    }
+}

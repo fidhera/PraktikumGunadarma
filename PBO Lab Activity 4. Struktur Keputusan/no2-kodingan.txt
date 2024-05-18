@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class InternetBill {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan paket [A,B,C]: ");
+        String paket = input.nextLine().toUpperCase();
+
+        System.out.print("Masukkan jam pemakaian: ");
+        double jam = input.nextDouble();
+
+        double totalTagihan = 0;
+
+        switch (paket) {
+            case "A":
+                totalTagihan = 100000;
+                if (jam > 20) {
+                    totalTagihan += (Math.floor(jam - 20) * 5000);
+                }
+                break;
+            case "B":
+                totalTagihan = 200000;
+                if (jam > 50) {
+                    totalTagihan += (Math.floor(jam - 50) * 5000);
+                }
+                break;
+            case "C":
+                totalTagihan = 350000;
+                break;
+            default:
+                System.out.println("Salah input! Jenis paket hanya A, B, atau C.");
+                System.exit(0);
+        }
+
+        System.out.printf("Total tagihan = Rp.%,.2f\n", totalTagihan);
+    }
+}

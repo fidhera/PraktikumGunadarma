@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class PersamaanKuadrat {
+    public static void main(String[] args) {
+        // [2] Deklarasikan a, b, c untuk menyimpan input pengguna
+        int a, b, c;
+        double x1, x2, d;
+
+        // Buat object scanner dan referensikan ke variabel keyboard
+        Scanner keyboard = new Scanner(System.in);
+
+        // Prompt pengguna untuk mendapatkan nilai a
+        System.out.print("Masukkan nilai a: ");
+        a = keyboard.nextInt();
+
+        // Prompt pengguna untuk mendapatkan nilai b
+        System.out.print("Masukkan nilai b: ");
+        b = keyboard.nextInt();
+
+        // Prompt pengguna untuk mendapatkan nilai c
+        System.out.print("Masukkan nilai c: ");
+        c = keyboard.nextInt();
+
+        // Hitung nilai diskriminan
+        d = b * b - 4 * a * c;
+
+        // Struktur keputusan: jika d < 0, tampilkan "Akar-akar dari persamaan kuadrat adalah imajiner."
+        // jika tidak, tampilkan akar-akar.
+        if (d < 0) {
+            System.out.println("Akar-akar dari persamaan kuadrat adalah imajiner.");
+        } else {
+            // Hitung akar persamaan kuadrat
+            x1 = (-b + Math.sqrt(d)) / (2 * a);
+            x2 = (-b - Math.sqrt(d)) / (2 * a);
+
+            // Tampilkan akar persamaan kuadrat dengan presisi dua tempat desimal
+            System.out.printf("x1 = %.2f%n", x1);
+            System.out.printf("x2 = %.2f%n", x2);
+        }
+    }
+}
