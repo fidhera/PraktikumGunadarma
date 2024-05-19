@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+/*
+    Program ini meminta pengguna memasukkan dua angka integer lalu
+    menjumlahkan kedua angka yang dimasukkan.
+    Kemudian program menanyakan pengguna apakah ingin memasukkan 
+    2 angka lainnya. Jika ya, program mengulang dan jika tidak,
+    program berhenti. 
+*/
+public class Penjumlahan {
+    public static void main(String[] args) {
+        int angka1, angka2, jumlah;
+        char pilihan;
+
+        Scanner keyboard = new Scanner(System.in);
+
+        do {
+            // Meminta pengguna memasukkan dua angka
+            System.out.print("Masukkan angka 1: ");
+            angka1 = keyboard.nextInt();
+
+            System.out.print("Masukkan angka 2: ");
+            angka2 = keyboard.nextInt();
+
+            // Menjumlahkan kedua angka
+            jumlah = angka1 + angka2;
+
+            // Menampilkan hasil jumlah
+            System.out.println("Jumlah = " + jumlah);
+
+            // Menanyakan apakah pengguna ingin mengulang
+            System.out.println("Apakah Anda ingin melakukan ini kembali (Y atau N)? ");
+            pilihan = keyboard.next().charAt(0);
+
+        } while (pilihan == 'Y' || pilihan == 'y');
+    }
+}
