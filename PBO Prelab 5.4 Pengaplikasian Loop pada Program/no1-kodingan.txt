@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ValidasiInput {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int angka;
+
+        do {
+            System.out.print("Masukkan angka bulat antara 1 s.d 4: ");
+            while (!scanner.hasNextInt()) {
+                System.out.println("Angka yang Anda masukkan salah. Silahkan masukkan kembali.");
+                System.out.print("Masukkan angka bulat antara 1 s.d 4: ");
+                scanner.next();
+            }
+            angka = scanner.nextInt();
+            scanner.nextLine(); // Membersihkan buffer input
+            if (angka < 1 || angka > 4)
+                System.out.println("Angka yang Anda masukkan salah. Silahkan masukkan kembali.");
+        } while (angka < 1 || angka > 4);
+
+        System.out.println("Angka yang Anda masukkan valid.");
+    }
+}
