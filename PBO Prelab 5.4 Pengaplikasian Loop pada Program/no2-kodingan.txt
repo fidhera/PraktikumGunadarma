@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class JumlahBilanganAsli {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan n: ");
+        int n = scanner.nextInt();
+
+        int jumlah = 0;
+        for (int i = 1; i <= n; i++) {
+            jumlah += i;
+        }
+
+        System.out.println("Jumlah bilangan asli dari 1 s.d " + n + " = " + jumlah);
+    }
+}
