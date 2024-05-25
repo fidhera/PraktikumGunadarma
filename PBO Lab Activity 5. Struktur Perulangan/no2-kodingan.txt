@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class JarakTempuh {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int kecepatan, waktu;
+
+        do {
+            System.out.print("Masukkan kecepatan kendaraan (km/jam): ");
+            kecepatan = scanner.nextInt();
+            if (kecepatan < 0) {
+                System.out.println("Kecepatan tidak bisa negatif. Masukkan kembali kecepatan.");
+            }
+        } while (kecepatan < 0);
+
+        do {
+            System.out.print("Masukkan waktu tempuh (jam): ");
+            waktu = scanner.nextInt();
+            if (waktu < 1) {
+                System.out.println("Waktu tempuh harus lebih besar dari atau sama dengan 1 jam. Masukkan kembali waktu tempuh.");
+            }
+        } while (waktu < 1);
+
+        System.out.println("Waktu (jam)\tJarak (km)");
+        for (int i = 1; i <= waktu; i++) {
+            int jarak = kecepatan * i;
+            System.out.printf("%-11d\t%6d\n", i, jarak);
+        }
+    }
+}

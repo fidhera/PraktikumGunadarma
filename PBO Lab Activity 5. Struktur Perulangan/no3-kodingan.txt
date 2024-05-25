@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int tiketTersedia = 10;
+        int pembeli = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        while (tiketTersedia > 0) {
+            System.out.print("Masukkan jumlah tiket yang ingin dibeli: ");
+            int tiketDibeli = scanner.nextInt();
+
+            if (tiketDibeli > 4) {
+                System.out.println("Anda tidak bisa membeli lebih dari 4 tiket.");
+                continue;
+            }
+
+            if (tiketDibeli > tiketTersedia) {
+                System.out.println("Maaf, sisa tiket yang tersisa adalah " + tiketTersedia + " tiket.");
+                continue;
+            }
+
+            tiketTersedia -= tiketDibeli;
+            pembeli++;
+
+            System.out.println("Anda membeli sebanyak " + tiketDibeli + " tiket.");
+            if (tiketTersedia != 0) {
+                System.out.println("Sisa tiket yang tersedia: " + tiketTersedia);
+            }
+        }
+
+        System.out.println("Semua tiket telah terjual kepada " + pembeli + " pembeli.");
+    }
+}

@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class OlahData {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double total = 0;
+        double min = Double.MAX_VALUE;
+        double max = Double.MIN_VALUE;
+        int count = 0;
+
+        System.out.print("Masukkan angka floating point positif (-1 untuk mengakhiri): ");
+        double input = scanner.nextDouble();
+
+        while (input != -1) {
+            total += input;
+            if (input < min) {
+                min = input;
+            }
+            if (input > max) {
+                max = input;
+            }
+            count++;
+
+            System.out.print("Masukkan angka floating point positif (-1 untuk mengakhiri): ");
+            input = scanner.nextDouble();
+        }
+
+        if (count == 0) {
+            System.out.println("");
+        } else {
+            double rataRata = total / count;
+            double selisih = max - min;
+
+            System.out.println("Rata-rata = " + rataRata);
+            System.out.println("Maksimum = " + max);
+            System.out.println("Minimum = " + min);
+            System.out.println("Selisih Maks dan Min = " + selisih);
+        }
+    }
+}
