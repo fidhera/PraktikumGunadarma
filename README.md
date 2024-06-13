@@ -1,4 +1,4 @@
-<!--pppppppppppppppppppppppppppppppppppspppppppppppppppppppppppppppppppppppppppps
+<!--ppppppppppppppppppppppppppppppppppspppppppppppppppppppppppppppppppppppppppps
 pppppppppppppppppppppppppppppppppppppppppppp-->
 # PraktikumGunadarma
 praktikum.gunadarma.ac.id
